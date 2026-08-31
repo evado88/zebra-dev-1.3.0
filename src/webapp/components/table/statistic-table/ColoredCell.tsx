@@ -8,7 +8,7 @@ type ColoredCellProps = {
     color?: CellStatusValues;
 };
 
-const cellStatusColor = {
+export const cellStatusColor = {
     [CellStatus.Valid]: "green",
     [CellStatus.Alert]: "red",
     [CellStatus.Warning]: "orange",

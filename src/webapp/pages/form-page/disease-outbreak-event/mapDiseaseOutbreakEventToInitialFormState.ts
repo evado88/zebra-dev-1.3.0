@@ -445,7 +445,7 @@ function getInitialFormStateForDiseaseOutbreakEvent(
             ],
         },
         suspectedDisease: {
-            title: "Suspected Disease",
+            title: "Event",
             id: "suspectedDisease_section",
             isVisible: true,
             required: true,
@@ -491,6 +491,7 @@ function getInitialFormStateForDiseaseOutbreakEvent(
             title: "Date Emerged",
             id: "emerged_section",
             isVisible: true,
+            required: true,
             fields: [
                 {
                     id: fromIdsDictionary("emergedDate"),
@@ -499,6 +500,7 @@ function getInitialFormStateForDiseaseOutbreakEvent(
                     type: "date",
                     value: diseaseOutbreakEvent?.emerged.date || null,
                     width: "200px",
+                    required: true,
                     showIsRequired: false,
                 },
                 {
@@ -519,6 +521,7 @@ function getInitialFormStateForDiseaseOutbreakEvent(
             title: "Date Detected",
             id: "detected_section",
             isVisible: true,
+            required: true,
             fields: [
                 {
                     id: fromIdsDictionary("detectedDate"),
@@ -527,6 +530,8 @@ function getInitialFormStateForDiseaseOutbreakEvent(
                     type: "date",
                     value: diseaseOutbreakEvent?.detected.date || null,
                     width: "200px",
+                    required: true,
+                    showIsRequired: false,
                 },
                 {
                     id: fromIdsDictionary("detectedNarrative"),
@@ -545,6 +550,7 @@ function getInitialFormStateForDiseaseOutbreakEvent(
             title: "Date Notified",
             id: "notified",
             isVisible: true,
+            required: true,
             fields: [
                 {
                     id: fromIdsDictionary("notifiedDate"),
@@ -553,6 +559,8 @@ function getInitialFormStateForDiseaseOutbreakEvent(
                     type: "date",
                     value: diseaseOutbreakEvent?.notified.date || null,
                     width: "200px",
+                    required: true,
+                    showIsRequired: false,
                 },
                 {
                     id: fromIdsDictionary("notifiedNarrative"),

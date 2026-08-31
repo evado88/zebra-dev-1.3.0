@@ -112,7 +112,7 @@ export function useAlertsPerformanceOverview(): State {
 
     const filtersConfig = useMemo<FiltersConfig[]>(
         () => [
-            { value: "confirmedDisease", label: i18n.t("Diseasex"), type: "multiselector" },
+            { value: "confirmedDisease", label: i18n.t("Disease"), type: "multiselector" },
             { value: "province", label: i18n.t("Province"), type: "multiselector" },
             { value: "date", label: i18n.t("Duration"), type: "datepicker" },
         ],
