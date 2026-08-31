@@ -5,8 +5,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2026-08-30T09:03:30.963Z\n"
-"PO-Revision-Date: 2026-08-30T09:03:30.963Z\n"
+"POT-Creation-Date: 2026-08-31T08:21:10.627Z\n"
+"PO-Revision-Date: 2026-08-31T08:21:10.627Z\n"
 
 msgid "Low"
 msgstr ""
@@ -169,6 +169,27 @@ msgid "Median"
 msgstr ""
 
 msgid "% Target Met"
+msgstr ""
+
+msgid "1 day"
+msgstr ""
+
+msgid "{{days}} days"
+msgstr ""
+
+msgid "Target met"
+msgstr ""
+
+msgid "Target missed"
+msgstr ""
+
+msgid "Not completed"
+msgstr ""
+
+msgid "No color"
+msgstr ""
+
+msgid "Color legend"
 msgstr ""
 
 msgid "Status: "
