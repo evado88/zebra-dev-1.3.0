@@ -16,6 +16,7 @@ import { useTableCell } from "./useTableCell";
 import { useStatisticCalculations } from "./useStatisticCalculations";
 import { ColoredCell } from "./ColoredCell";
 import { CalculationRow } from "./CalculationRow";
+import { TableLegend } from "./TableLegend";
 import { Option } from "../../utils/option";
 import { Maybe } from "../../../../utils/ts-utils";
 import { Link } from "react-router-dom";
@@ -295,6 +296,11 @@ export const StatisticTable: React.FC<StatisticTableProps> = React.memo(
                         </TableBody>
                     </Table>
                 </StyledTableContainer>
+                <TableLegend
+                    columns={columns}
+                    columnRules={columnRules}
+                    editRiskAssessmentColumns={editRiskAssessmentColumns}
+                />
             </React.Fragment>
         );
     }

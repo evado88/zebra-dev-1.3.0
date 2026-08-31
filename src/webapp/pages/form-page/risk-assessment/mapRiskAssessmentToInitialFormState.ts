@@ -1,6 +1,7 @@
 import i18n from "@eyeseetea/d2-ui-components/locales";
 import {
     riskAssessmentGradingCodes,
+    riskAssessmentGradingOptionCodeMap,
     riskAssessmentSummaryCodes,
 } from "../../../../data/repositories/consts/RiskAssessmentConstants";
 import {
@@ -42,6 +43,11 @@ export function mapRiskGradingToInitialFormState(
     const reputationalRiskOptions: UIOption[] = mapToPresentationOptions(reputationalRisk);
     const severityOptions: UIOption[] = mapToPresentationOptions(severity);
     const capabilityOptions: UIOption[] = mapToPresentationOptions(capability);
+
+    //Capability is hidden in the form, but RiskAssessmentGrading still requires a value for it,
+    //so it defaults to the first configured capability option.
+    const defaultCapabilityValue =
+        capabilityOptions[0]?.value ?? riskAssessmentGradingOptionCodeMap.Capability1;
 
     //SNEHA TO DO : Create this form by iterating over Object Keys
     return {
@@ -201,18 +207,18 @@ export function mapRiskGradingToInitialFormState(
             {
                 title: "Capability",
                 id: riskAssessmentGradingCodes.capability,
-                isVisible: true,
+                isVisible: false,
                 required: true,
                 fields: [
                     {
                         id: `${riskAssessmentGradingCodes.capability}-a`,
                         placeholder: "Select..",
-                        isVisible: true,
+                        isVisible: false,
                         errors: [],
                         type: "select",
                         multiple: false,
                         options: capabilityOptions,
-                        value: "",
+                        value: defaultCapabilityValue,
                         required: true,
                         showIsRequired: false,
                         disabled: false,
